@@ -1,0 +1,115 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Way to God</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #f5f6fa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        header {
+            background: #6c63ff;
+            color: #fff;
+            padding: 2rem 1rem 1.5rem 1rem;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 4rem;
+        }
+        .tree-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #fff;
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(108,99,255,0.10);
+            padding: 2.5rem 3rem 2rem 3rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 2rem;
+            position: relative;
+        }
+        .tree-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 32px rgba(108,99,255,0.18);
+            background: #f0f0ff;
+        }
+        .tree-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #6c63ff;
+            text-shadow: 0 2px 8px #6c63ff22;
+        }
+        .tree-label {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #6c63ff;
+            letter-spacing: 1px;
+        }
+        .tree-tooltip {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 1rem;
+            background: #fff;
+            color: #222;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(108,99,255,0.13);
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            white-space: nowrap;
+            z-index: 10;
+            pointer-events: none;
+        }
+        .tree-btn:hover .tree-tooltip,
+        .tree-btn:focus .tree-tooltip {
+            display: block;
+            animation: fadeIn 0.3s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(-50%) translateY(10px);}
+            to { opacity: 1; transform: translateX(-50%) translateY(0);}
+        }
+        .desc {
+            margin-top: 2.5rem;
+            font-size: 1.1rem;
+            color: #444;
+            max-width: 500px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Way to God</h1>
+        <div style="font-size:1.2rem; margin-top:0.5rem;">A journey of faith, growth, and daily steps</div>
+    </header>
+    <div class="main-content">
+        <button class="tree-btn" onclick="window.location.href='skilltree.html'" aria-describedby="tree-tooltip">
+            <span class="tree-icon">🌳</span>
+            <span class="tree-label">Skill Tree</span>
+            <span class="tree-tooltip" id="tree-tooltip">Daily Spiritual Skill Tree</span>
+        </button>
+        <div class="desc">
+            Welcome! Begin your spiritual journey with daily quests and skills.<br>
+            Hover over the tree to see the skill tree name, and click to explore and grow closer to God, one step at a time.
+        </div>
+    </div>
+    </body>
+    </html>
